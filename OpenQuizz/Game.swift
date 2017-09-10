@@ -38,7 +38,7 @@ class Game {
         
         QuestionManager.shared.get { (questions) in
             self.questions = questions
-            self.state = .ongoing
+            self.state = .ongoingd
         }
     }
     
