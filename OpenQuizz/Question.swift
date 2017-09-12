@@ -9,6 +9,6 @@
 import Foundation
 
 struct Question {
-    var title: String
-    var isCorrect: Bool
+    var title = ""
+    var isCorrect = false
 }
