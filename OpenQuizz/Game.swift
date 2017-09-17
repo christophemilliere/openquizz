@@ -11,6 +11,7 @@ import Foundation
 class Game {
     
     var score = 0
+    var questionIsCorrect = false
     var questions:[Question] = []
     
     enum State {
@@ -47,8 +48,10 @@ class Game {
     }
     
     func answerCurrentQuestion(with answer: Bool) {
+        questionIsCorrect = false
         if (currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
             score += 1
+            questionIsCorrect = true
         }
         goToNextQuestion()
     }
